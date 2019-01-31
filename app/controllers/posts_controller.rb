@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to author_path(@post)
     else
-      render "new"
+      render :new
     end
   end
 
