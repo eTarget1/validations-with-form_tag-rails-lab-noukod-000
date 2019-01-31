@@ -13,8 +13,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Author.create(post_params)
-    if @post.valid?
-      @post.save
+    if @post.save
       redirect_to author_path(@post)
     else
       render "new"
